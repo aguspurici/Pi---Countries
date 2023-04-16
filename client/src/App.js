@@ -1,10 +1,17 @@
 import './App.css';
+import  Home  from "./vistas/Home"
+import { BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Countries</h1>
-    </div>
+    <BrowserRouter>
+    
+      <div className="App">
+
+        <Route path="/home" component={Home} />
+      </div>
+    
+    </BrowserRouter>
   );
 }
 
