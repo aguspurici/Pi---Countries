@@ -9,7 +9,6 @@ import {
     GET_NAME_COUNTRIES,
     GET_DETAIL,
     RESET_DETAIL,
-    //ORDENAR_CINCO,
   } from "../actions/actions";
   
   const initialState = {

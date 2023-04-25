@@ -1,0 +1,89 @@
+.imagen{
+  margin-top: -10px;
+  width: auto;
+  height: 15rem;
+  padding: 1rem;
+}
+
+.header{
+  color: #551A8B;
+  background-color:  rgba(76, 0, 130, 0.099);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:space-evenly;
+  flex-direction: row;
+  height: 4rem;
+  width: auto;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.contenedor{
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.detalles{
+  margin-top: -10px;
+  height: 17rem;
+  width: 23rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0px 1px 4px 0px rgb(152, 100, 236);
+  background-color: rgba(76, 0, 130, 0.099);
+}
+
+.activity{
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  justify-content: center; 
+  flex-direction: row;
+  border: 1rem;
+  height: 15rem;
+}
+
+.boxActivity{
+  width: 15rem;
+  height: 12rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgba(76, 0, 130, 0.099);
+  box-shadow: 0px 1px 4px 0px rgb(152, 100, 236);
+  margin: 0.5rem;
+  margin-top: -15px;
+}
+
+.volver{
+  cursor: pointer;
+  margin: 0.3rem;
+  border: none;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  font-size: 15px;
+  background-color: white;
+  color: #551A8B;
+  font-weight: none;
+
+}
+.crear{
+  cursor: pointer;
+  margin: 0.3rem;
+  border: none;
+  width: 9.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+  font-size: 15px;
+  background-color: white;
+  color: #551A8B;
+  font-weight: none;
+  white-space: nowrap; 
+}

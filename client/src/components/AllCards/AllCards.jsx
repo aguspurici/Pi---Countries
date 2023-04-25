@@ -10,11 +10,12 @@ import {
   filterActivity,
   orderByName,
   orderByPopulation,
-  //ordenarCinco,
+  
 } from "../../redux/actions/actions";
 import Card from "../Card/Card";
 import Paginado from "../Paginate/Paginate";
-import SearchBar from "../SearchBar/SearchBar";
+import Navbar from "../NavBar/NavBar";
+import style from "./AllCards.module.css"
 
 
 export default function Home() {
@@ -24,16 +25,12 @@ export default function Home() {
 
   const [, setOrden] = useState("");
 
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const [countriesPerPage] = useState(10);
 
-  // var countriesPerPage = 0;
-  // if (currentPage === 1) {
-  //   countriesPerPage = 9;
-  // }
-  // if (currentPage >= 2) {
-  //   countriesPerPage = 10;
-  // }
+ 
 
   const indexOfLastCountry = currentPage * countriesPerPage;
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
@@ -61,9 +58,7 @@ export default function Home() {
     dispatch(getAllCountries());
   }
 
-  // function ordenar() {
-  //   dispatch(ordenarCinco());
-  // }
+ 
 
   function handleSort(e) {
     e.preventDefault();
@@ -91,6 +86,7 @@ export default function Home() {
 
   return (
     <div >
+      <Navbar />
       <div >
         <button
           
@@ -98,23 +94,17 @@ export default function Home() {
             handleClick(e);
           }}
         >
-          Cargar Paises
+          Todos los paises
         </button>
-        <h1>Countries's App</h1>
         <div >
-          <Link to="/activities" >
-            Crear Actividad
-          </Link>
         </div>
       </div>
       <div >
-        <div >
-          <select
-            onChange={(e) => handleFilterContinent(e)}
-            
-          >
-            <option selected disabled value="">
-              Continentes
+        <nav className={style.opciones}>
+          <select  className={style.poblacion} 
+            onChange={(e) => handleFilterContinent(e)} >
+            <option>
+              CONTINENTE
             </option>
             <option value="All">Todos</option>
             <option value="Africa">Africa</option>
@@ -126,30 +116,27 @@ export default function Home() {
             <option value="Oceania">Oceania</option>
           </select>
 
-          <select onChange={(e) => handleSort(e)} >
-            <option selected disabled value="">
-              Nombre Alfabeticamente
+          <select className={style.orden} onChange={(e) => handleSort(e)} >
+            <option>
+              ORDEN
             </option>
-            <option value="asc">Ascendente</option>
-            <option value="desc">Descendente</option>
+            <option value="asc">Asc</option>
+            <option value="desc">Des</option>
           </select>
 
-          <select onChange={(e) => handleSort2(e)} >
-            <option selected disabled value="">
-              Poblacion
+          <select className={style.poblacion} onChange={(e) => handleSort2(e)} >
+            <option>
+              POBLACION
             </option>
-            <option value="asc">Ascendente</option>
-            <option value="desc">Descendente</option>
+            <option value="asc">Asc</option>
+            <option value="desc">Des</option>
           </select>
 
-          {/* <button onClick={(e) => ordenar(e)}>5</button> */}
+         
 
-          <select
-            onChange={(e) => handleFilterActivity(e)}
-            
-          >
-            <option selected disabled value="">
-              Actividades
+          <select className={style.actividad} onChange={(e) => handleFilterActivity(e)}>
+            <option>
+              ACTIVIDAD
             </option>
             {activities?.map((act) => {
               return (
@@ -159,18 +146,17 @@ export default function Home() {
               );
             })}
           </select>
-          <div onChange={(e) => search(e)} >
-            <SearchBar />
+          <div onChange={(e) => search(e)} >       
           </div>
-        </div>
+        </nav>
       </div>
-
-      <div >
+      <div className={style.cardContent}>
         {currentCountry?.map((country) => {
           return (
-            <div >
+            <div key={country.id}>
               <Link to={"/detail/" + country.id} >
                 <Card
+                  id={country.id}
                   name={country.name}
                   flag={country.flag}
                   continent={country.continent}
@@ -180,15 +166,15 @@ export default function Home() {
           );
         })}
       </div>
-      
       <div >
         <Paginado
           countriesPerPage={countriesPerPage}
           allCountries={countries.length}
           paginate={paginate}
         />
-      </div>
-      
+      </div> 
+            
     </div>
   );
 }
+

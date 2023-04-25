@@ -1,0 +1,58 @@
+.cardContent{
+  display: flex;
+  padding: 2rem;
+  font: times;
+  width: auto;
+  height: auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+} 
+
+.opciones{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 3rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* border-left: 1px;
+  border-right: 1px; */
+  /* border: 1px; */
+  border:none
+}
+
+.orden{
+  border: none;
+     /* margin-left: 4rem; */
+     cursor: pointer;
+      background-color: #ffffff;
+     height: 1.5rem;
+     width: 8rem;
+     color: rgb(64, 0, 85);
+     text-align: center;
+     
+}
+
+.actividad{
+  /* margin-left: 4rem; */
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff;
+  height: 1.5rem;
+  width: 8rem;
+  color: rgb(64, 0, 85);
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.poblacion{
+  border: none;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 8rem;
+  color: rgb(64, 0, 85);
+  text-align: center;
+}

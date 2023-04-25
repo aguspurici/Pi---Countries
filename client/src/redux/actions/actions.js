@@ -10,7 +10,7 @@ export const POST_ACTIVITY = "POST_ACTIVITY";
 export const GET_NAME_COUNTRIES = "GET_NAME_COUNTRIES";
 export const GET_DETAIL = "GET_DETAIL";
 export const RESET_DETAIL = "RESET_DETAIL";
-export const ORDENAR_CINCO = "ORDENAR_CINCO";
+
 
 export function getAllCountries() {
   return async function (dispatch) {
@@ -87,17 +87,13 @@ export function getCountriesByName(name) {
   };
 }
 
-// export function ordenarCinco(){
-//   return ({
-//       type: ORDENAR_CINCO,
-//     })
-// }
 
 export function getDetail(id) {
+  console.log(id);
   return async function (dispatch) {
     try {
       var response = await axios(`http://localhost:3001/countries/${id}`);
-      // console.log(id);
+      
       return dispatch({
         type: GET_DETAIL,
         payload: response.data,

@@ -1,10 +1,10 @@
 import React from "react";
-import AllCards from "../components/AllCards/AllCards"
+import Landing from "../components/Landing/LandingPage"
 
 export default function Home() {
   return (
     <div>
-      <AllCards/>
+      <Landing />
     </div>
   )
 }

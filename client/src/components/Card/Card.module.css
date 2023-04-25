@@ -1,0 +1,33 @@
+
+
+.borde{
+  width: 15rem;
+  height: 18rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  display: inline-grid;
+  align-content: space-around;
+  box-shadow: 0px 7px 8px 3px rgb(64 9 86 / 27%);
+}
+
+.imagen{
+  background: center;
+  width: 8rem;
+  height: 5rem;
+}
+
+.contenido{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-around;
+  padding: none;
+}
+
+.pais{
+  height: 5rem;
+  width: 12rem;
+  text-align: center;
+}

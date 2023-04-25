@@ -1,0 +1,75 @@
+.logo{
+  height: 5rem;
+  padding: 2rem;
+  margin: 3rem;
+}
+
+
+.contenedor{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  background-image: url('../Landing/mapa1.jpg');
+  height: 8rem;
+  width: auto;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.nuevaActividad{
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-size: 15px;
+  margin: 0.3rem;
+  text-align: justify;
+  padding-inline-end: 4rem;
+  word-spacing: 0.5rem;
+  border-radius: 1rem;
+}
+.nuevaActividad:hover {
+  background-color: rgb(173, 216, 230);
+
+}
+.textCreate{
+  text-decoration: none;
+}
+
+/* @media screen and (max-width: 460px){
+  .contenedor{
+      background-image: url('../Landing/mapa1.jpg');
+      
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      height: 7rem;
+  }
+  .logo{
+      padding: 0;
+      margin: 0 2rem 0 1rem;
+  }
+  .nuevaActividad{
+  cursor: none; 
+  height: auto;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  padding: 0;
+  word-spacing: 0.5rem;
+  align-items: normal;
+  }
+  .contenedor{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: row;
+    background-image: url('../Landing/mapa1.jpg');
+    height: 8rem;
+    width: auto;
+    align-content: flex-start;
+    align-items: center;
+  }
+} */
