@@ -1,0 +1,174 @@
+.all{
+  background-image: url(../Landing/mapa1.jpg);
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: stretch;
+}
+.contenedorFormulario{
+  margin-top: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.formulario{
+  padding: 2rem;
+  margin-top: 5%;
+  height: 32rem;
+  width: 40rem;
+  display: flex;
+  margin: 3rem;
+  background-color: white;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: -1px 1px 22px 9px  rgba(116, 35, 215, 0.163);
+  justify-content: center;
+align-items: center;
+text-align: center;
+}
+ 
+.form input,
+.form select {
+  border: none;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  margin: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+}
+
+.form label {
+  color: black;
+  text-transform: uppercase;
+  font-size: 18px;
+
+}
+
+.name,
+.difficulty,
+.duration,
+.season,
+.countries {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form input {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.form input:hover,
+.form select:hover {
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px black;
+  border: 1px solid black;
+}
+
+.countriesSelected {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  /* justify-content: space-evenly; */
+  /* flex-wrap: wrap;*/
+}
+
+
+.input {
+  border: 0;
+  border-bottom: 2px solid black;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 10px;
+  color: black;
+  justify-content: center;
+}
+
+.countries {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.countries h4 {
+  color: #e8e8e8;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 10px;
+}
+
+.countries button {
+  height: 35px;
+  width: 35px;
+  border: none;
+  color: #090909;
+  padding: 05px;
+  margin: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  cursor: pointer;
+} 
+
+.countries button:hover {
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  border: 1px solid white;
+}
+
+.btnHome {
+  border: none;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  margin: 30px;
+  font-size: 16px;
+  height: 40px;
+  width: 200px;
+  text-transform: uppercase;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  cursor: pointer;
+  display: inline-block;
+  position: fixed;
+  margin-top: 10px;
+  bottom: 20px;
+  right: 20px;
+
+}
+
+.btnHome:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 6px 6px 12px black;
+  border: 1px solid black;
+}
+
+.error {
+  color: black;
+  font-weight: 800;
+}
+
+.country{
+  font-size: 10px;
+
+}

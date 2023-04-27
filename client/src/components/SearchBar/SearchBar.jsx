@@ -14,6 +14,7 @@ export default function SearchBar() {
     e.preventDefault();
     setName(e.target.value);
   }
+  
 
   function handleSubmit(e) { // aca despacho mi accion
     e.preventDefault();

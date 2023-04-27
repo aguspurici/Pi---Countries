@@ -12,15 +12,16 @@ export const GET_DETAIL = "GET_DETAIL";
 export const RESET_DETAIL = "RESET_DETAIL";
 
 
-export function getAllCountries() {
+export function getAllCountries() { 
   return async function (dispatch) {
-    const reponse = await axios("http://localhost:3001/countries");
-    return dispatch({
+    const reponse = await axios("http://localhost:3001/countries"); // Se realiza una petición a la API para obtener todos los países
+    return dispatch({ //se utiliza para enviar esta acción al store, para que los reducers correspondientes puedan actualizar el estado global de la aplicación
       type: GET_COUNTRIES,
       payload: reponse.data,
     });
   };
 }
+
 
 export function getAllActivities() {
   return async function (dispatch) {
@@ -34,7 +35,7 @@ export function getAllActivities() {
 
 export function postActivity(payload) {
   return async function (dispatch) {
-    const activity = axios.post("http://localhost:3001/activities", payload);
+    const activity = await axios.post("http://localhost:3001/activities", payload);
     return dispatch({
       type: POST_ACTIVITY,
       payload: activity,
@@ -81,15 +82,15 @@ export function getCountriesByName(name) {
         payload: response.data,
       });
     } catch (error) {
-      console.log(error);
-      alert("No exite el pais")
+      console.log(error)
+      alert("No existe el pais");
     }
   };
 }
 
 
 export function getDetail(id) {
-  console.log(id);
+  //console.log(id);
   return async function (dispatch) {
     try {
       var response = await axios(`http://localhost:3001/countries/${id}`);

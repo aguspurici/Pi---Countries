@@ -8,18 +8,19 @@ import styles from "./Detail.module.css"
 
 export default function CountryDetail(props) {
 
-  const dispatch = useDispatch();
-  const detail = useSelector((state) => state.detail);
+  const dispatch = useDispatch(); //despacha acciones a los reducers para actualizar el estado global de la apli
+  const detail = useSelector((state) => state.detail);//se obtiene la info del detalle del pais desde el estado global
   console.log(detail);
 
-  useEffect(() => {
-    dispatch(getDetail(props.match.params.id));
-    dispatch(resetDetail());
+  //se ejecuta una vez que se monta el componente o cada vez que se cambia el id en la url
+  useEffect(() => { 
+    dispatch(getDetail(props.match.params.id)); //obtener la info del pais correspondiente al id en la url
+    dispatch(resetDetail()); //limpia la info del detalle de pais en el estado global
   }, [dispatch, props.match.params.id]);
   
   return (
     <div >
-      <Navbar/>
+      {/* <Navbar/> */}
       <div className={styles.header}>
         <Link to="/home">
           <button className={styles.volver} >VOLVER</button>
@@ -31,7 +32,7 @@ export default function CountryDetail(props) {
 
       </div>
       
-      {Object.keys(detail).length ? ( 
+      {Object.keys(detail).length ? ( // verifica si hay info disponible
         <div>
         <section className={styles.contenedor}>
           <img  src={detail.flag} alt="flag" className={styles.imagen} />
